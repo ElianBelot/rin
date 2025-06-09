@@ -1,7 +1,7 @@
 <!--- Banner -->
 <br />
 <p align="center">
-<a href="#"><img src="https://i.ibb.co/7pKLTjw/image.png"></a>
+<a href="#"><img src="https://i.ibb.co/VcHWgmw4/image.png"></a>
 <h3 align="center">RIN</h3>
 <p align="center">Implementation of "Scalable Adaptive Computation for Iterative Generation" (ICML 2023)</p>
 
@@ -12,7 +12,7 @@ This repository is an implementation of [Recurrent Interface Networks (RINs)](ht
 
 <!--- Architecture --><br />
 ## Architecture
-<a href="#"><img src="https://i.ibb.co/7pKLTjw/image.png"></a>
+<a href="#"><img src="https://i.ibb.co/sYbRK10/image.png"></a>
 
 The architecture consists of three key components:
 
