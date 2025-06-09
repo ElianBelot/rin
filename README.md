@@ -2,13 +2,15 @@
 <br />
 <p align="center">
 <a href="#"><img src="https://i.ibb.co/VcHWgmw4/image.png"></a>
-<h3 align="center">RIN</h3>
+<h3 align="center">Recurrent Interface Networks</h3>
 <p align="center">Implementation of "Scalable Adaptive Computation for Iterative Generation" (ICML 2023)</p>
 
 <!--- About --><br />
 ## About
 
 This repository is an implementation of [Recurrent Interface Networks (RINs)](https://arxiv.org/abs/2212.11972), an attention-based architecture that decouples core computation from data dimensionality, enabling adaptive computation for scalable generation of high-dimensional data. RINs focus the bulk of computation on a set of latent tokens, using cross-attention to route information between latent and data tokens. This leads to state-of-the-art pixel diffusion models for image and video generation, scaling to 1024×1024 images without cascades or guidance, while being domain-agnostic and up to 10× more efficient than 2D and 3D U-Nets.
+
+This implementation uses the RIN infrastructure in conjunction with a [Denoising Diffusion Probabilistic Model (DDPM)](https://arxiv.org/abs/2006.11239) for image generation.
 
 <!--- Architecture --><br />
 ## Architecture
