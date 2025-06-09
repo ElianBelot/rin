@@ -115,9 +115,9 @@ If you use this code in your research, please cite both the original paper and t
 }
 
 @software{rin_implementation,
-  author = {Elian},
+  author = {Elian Belot},
   title = {RIN Implementation},
   year = {2024},
-  url = {https://github.com/elian/rin}
+  url = {https://github.com/ElianBelot/rin}
 }
 ```
