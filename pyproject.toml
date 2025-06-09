@@ -1,0 +1,87 @@
+[project]
+name = "rin"
+version = "0.1.0"
+description = "Recurrent Interface Network for Image Generation"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Elian Belot"}]
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "lightning>=2.0.0",
+    "torchmetrics>=0.11.4",
+    "hydra-core==1.3.2",
+    "hydra-colorlog==1.2.0",
+    "hydra-optuna-sweeper==1.2.0",
+    "wandb",
+    "rootutils",
+    "rich",
+    "matplotlib",
+    "ipywidgets",
+    "ipykernel",
+    "gdown",
+    "diffusers",
+    "torchinfo",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "pre-commit>=3.0.0",
+    "mypy>=1.0.0",
+    "types-setuptools",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+
+lint.extend-select = [
+    "W",   # pycodestyle warnings
+    "I",   # isort
+    "C",   # flake8-comprehensions
+    # "ISC", # flake8-implicit-str-concat
+    "T10", # flake8-debugger
+    "A",   # flake8-builtins
+    "UP",  # pyupgrade
+]
+
+lint.extend-ignore = [
+    # Allow shadowing built-ins
+    "A001",
+    "A002",
+    "A003",
+
+    # Allow non top-level imports for scripts
+    "E402",
+
+    # Ignore line length (use black instead)
+    "E501",
+
+    # Allow short variable names
+    "E741",
+
+    # Allow import *
+    "F403",
+
+    # Allow max complexity
+    "C901",
+]
+
+extend-exclude = ["__pycache__"]
+fix = true
+
+[tools.ruff.isort]
+combine-as-imports = true
+
+[tool.pytest.ini_options]
+pythonpath = "."
